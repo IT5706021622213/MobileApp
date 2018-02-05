@@ -1,0 +1,84 @@
+<ion-header style="background-color:#2a2a2c">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon style="color: #00d1b2" name="menu"></ion-icon>
+    </button>
+    <ion-title>Scrum</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="puppies">
+        To Do
+      </ion-segment-button>
+      <ion-segment-button value="kittens">
+        In Progress
+      </ion-segment-button>
+      <ion-segment-button value="ducklings">
+        Done
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="pane">
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-card style="background-color:#6AF9C4">
+        <ion-card-content>
+          <font color="#000" size="4">Statue : </font><font color="#FFFF00" size="4"><b> Waiting </b></font>
+          <div style="padding-top: 10px; padding-bottom: 10px;">
+            <font color="#000">
+              &nbsp;&nbsp;&nbsp;รบกวนติดตั้ง Notbook และทำการเชื่อมต่อกับ Project ในห้องประชุม 1 ชั้น 3 ในวันพุธที่ 24 ม.ค.61 เวลา 08.30 น. เพื่อใช้ในการประชุม กก.ประจำส่วนงานฯ ครั้งที่ 11/2561 … ขอบคุณนะคับ
+            </font>
+          </div>
+          <font color="#000">Date : 2018-01-28 </font>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-card style="background-color:#FFF263">
+        <ion-card-content>
+          <font color="#000" size="4">Statue : </font><font color="#00FF00" size="4"><b> On Time </b></font>
+          <div style="padding-top: 10px; padding-bottom: 10px;">
+            <font color="#000">
+              &nbsp;&nbsp;&nbsp;รบกวนติดตั้ง Notbook และทำการเชื่อมต่อกับ Project ในห้องประชุม 1 ชั้น 3 ในวันพุธที่ 24 ม.ค.61 เวลา 08.30 น. เพื่อใช้ในการประชุม กก.ประจำส่วนงานฯ ครั้งที่ 11/2561 … ขอบคุณนะคับ
+            </font>
+          </div>
+          <font color="#000">Job Start : 2018-01-28 </font><br>
+          <font color="#000">Deadline : 2018-01-30 </font><br>
+          <font color="#000">Name : Apinan Singbut </font><br>
+          <font color="#000">Position : Programmer </font>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'ducklings'">
+      <ion-card style="background-color:#64E572">
+        <ion-card-content>
+          <font color="#000" size="4">Statue : </font><font color="#00FF00" size="4"><b> On Time </b></font>
+          <div style="padding-top: 10px; padding-bottom: 10px;">
+            <font color="#000">
+              &nbsp;&nbsp;&nbsp;รบกวนติดตั้ง Notbook และทำการเชื่อมต่อกับ Project ในห้องประชุม 1 ชั้น 3 ในวันพุธที่ 24 ม.ค.61 เวลา 08.30 น. เพื่อใช้ในการประชุม กก.ประจำส่วนงานฯ ครั้งที่ 11/2561 … ขอบคุณนะคับ
+            </font>
+          </div>
+          <font color="#000">Job Start : 2018-01-28 </font><br>
+          <font color="#000">Deadline : 2018-01-30 </font><br>
+          <font color="#000">Job End : 2018-01-29 </font><br>
+          <font color="#000">Name : Apinan Singbut </font><br>
+          <font color="#000">Position : Programmer </font>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>
+
+<style type="text/css">
+.pane{
+background:url('assets/imgs/bghome.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
+</style>

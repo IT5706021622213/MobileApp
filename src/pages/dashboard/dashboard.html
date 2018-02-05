@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon style="color: #00d1b2" name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="pane">
+  <ion-card>
+    <ion-card-content>
+      <div class="col-md-12">
+        <chart [options]="chartPie" style="display: block" type="chart"></chart>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <div class="col-md-12">
+        <chart [options]="chartColumn" style="display: block" type="chart"></chart>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <div class="col-md-12">
+        <chart [options]="chartOptions" style="display: block" type="chart"></chart>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<style type="text/css">
+.pane{
+background:url('assets/imgs/bghome.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
+</style>
